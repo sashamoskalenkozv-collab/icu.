@@ -98,6 +98,32 @@ p[id] {
     font-weight: 500;
 }
 
+.video-block {
+    display: grid;
+    gap: 20px;
+    justify-items: center;
+    background: linear-gradient(180deg, #f8faff 0%, #eef4ff 100%);
+    border: 1px solid #dfe9ff;
+    border-radius: 20px;
+    padding: 24px 20px;
+    box-shadow: 0 12px 28px rgba(79, 70, 229, 0.08);
+}
+
+.video-block h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #312e81;
+}
+
+.video-block iframe {
+    width: min(100%, 560px);
+    aspect-ratio: 16 / 9;
+    border: none;
+    border-radius: 16px;
+    box-shadow: 0 12px 24px rgba(15, 23, 42, 0.15);
+    background: #000;
+}
+
 footer {
     background: #111827;
     color: rgba(255, 255, 255, 0.8);
@@ -117,5 +143,9 @@ footer {
 
     section p {
         font-size: 0.98rem;
+    }
+
+    .video-block {
+        padding: 18px 12px;
     }
 }
