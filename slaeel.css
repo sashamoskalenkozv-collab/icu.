@@ -152,6 +152,25 @@ body {
     font-size: 0.75rem;
     font-weight: 700;
 }
+header {
+    background: linear-gradient(90deg, #4f46e5, #7c3aed);
+    color: white;
+    text-align: center;
+    padding: 40px 20px 30px;
+    box-shadow: 0 6px 20px rgba(79, 70, 229, 0.2);
+}
+
+header h1 {
+    margin: 0;
+    font-size: clamp(2rem, 4vw, 3rem);
+    letter-spacing: 1px;
+}
+
+header p {
+    margin: 12px 0 0;
+    font-size: 1.1rem;
+    opacity: 0.95;
+}
 
 @media (max-width: 600px) {
     .animal-shell {
@@ -168,5 +187,23 @@ body {
 
     .animal-icon {
         font-size: 4rem;
+    }
+    
+}
+@media (max-width: 600px) {
+    header {
+        padding-top: 30px;
+    }
+
+    section>div {
+        padding: 18px 16px;
+    }
+
+    section p {
+        font-size: 0.98rem;
+    }
+
+    .video-block {
+        padding: 18px 12px;
     }
 }
