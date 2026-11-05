@@ -1,0 +1,186 @@
+:root {
+    --bg-1: #090c18;
+    --bg-2: #161b2d;
+    --bg-3: #20172d;
+    --purple: #9b5de5;
+    --pink: #f15bb5;
+    --violet: #c084fc;
+    --text: #f7f3ff;
+    --muted: #d9d2ff;
+    --card: rgba(18, 24, 39, 0.8);
+    --card-strong: rgba(27, 22, 42, 0.95);
+    --line: rgba(181, 130, 255, 0.35);
+    --shadow: rgba(9, 12, 21, 0.6);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: "Segoe UI", Tahoma, sans-serif;
+    color: var(--text);
+    background:
+        radial-gradient(circle at 10% 20%, rgba(155, 93, 229, 0.35), transparent 25%),
+        radial-gradient(circle at 85% 15%, rgba(241, 91, 181, 0.22), transparent 20%),
+        radial-gradient(circle at 50% 100%, rgba(192, 132, 252, 0.18), transparent 25%),
+        linear-gradient(135deg, var(--bg-1) 0%, var(--bg-2) 42%, var(--bg-3) 100%);
+}
+
+.animal-shell {
+    max-width: 1220px;
+    margin: 0 auto;
+    padding: 64px 20px 80px;
+}
+
+.animal-header {
+    text-align: center;
+    margin-bottom: 38px;
+}
+
+.animal-header h1 {
+    margin: 0 0 18px;
+    font-size: clamp(2.4rem, 5vw, 4.2rem);
+    letter-spacing: 0.04em;
+    color: #fff;
+    text-shadow: 0 0 20px rgba(155, 93, 229, 0.8);
+}
+
+.animal-header p {
+    max-width: 760px;
+    margin: 0 auto;
+    color: var(--muted);
+    line-height: 1.8;
+    font-size: 1.08rem;
+}
+
+.animal-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    gap: 28px;
+}
+
+.animal-card {
+    position: relative;
+    overflow: hidden;
+    padding: 18px;
+    border-radius: 30px;
+    background: linear-gradient(180deg, rgba(18, 24, 39, 0.9), rgba(24, 19, 35, 0.92));
+    border: 1px solid var(--line);
+    box-shadow: 0 20px 45px var(--shadow);
+    transition: transform 0.28s ease, border-color 0.28s ease, box-shadow 0.28s ease;
+}
+
+.animal-card:hover {
+    transform: translateY(-8px) scale(1.01);
+    border-color: rgba(241, 91, 181, 0.6);
+    box-shadow: 0 28px 55px rgba(11, 12, 22, 0.7);
+}
+
+.animal-card::before {
+    content: "";
+    position: absolute;
+    top: -60px;
+    right: -60px;
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, rgba(155, 93, 229, 0.38), transparent 62%);
+    border-radius: 50%;
+}
+
+.animal-visual {
+    position: relative;
+    z-index: 1;
+    height: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 16px;
+    background: linear-gradient(135deg, rgba(155, 93, 229, 0.2), rgba(241, 91, 181, 0.12));
+    border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.animal-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    filter: saturate(1.2) contrast(1.1);
+}
+
+.animal-icon {
+    font-size: 4.8rem;
+    filter: drop-shadow(0 12px 24px rgba(155, 93, 229, 0.5));
+}
+
+.animal-content {
+    position: relative;
+    z-index: 1;
+}
+
+.animal-badge {
+    display: inline-block;
+    padding: 8px 12px;
+    border-radius: 999px;
+    background: rgba(241, 91, 181, 0.12);
+    border: 1px solid rgba(241, 91, 181, 0.35);
+    color: #ffd0ef;
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-weight: 800;
+}
+
+.animal-name {
+    margin: 16px 0 10px;
+    font-size: 1.85rem;
+    color: #fff;
+    line-height: 1.2;
+}
+
+.animal-text {
+    margin: 0;
+    color: var(--muted);
+    line-height: 1.7;
+    font-size: 0.97rem;
+}
+
+.animal-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+    margin-top: 18px;
+}
+
+.animal-tag {
+    padding: 8px 12px;
+    border-radius: 999px;
+    background: rgba(155, 93, 229, 0.12);
+    border: 1px solid rgba(155, 93, 229, 0.3);
+    color: #d8c3ff;
+    font-size: 0.74rem;
+    font-weight: 700;
+}
+
+@media (max-width: 600px) {
+    .animal-shell {
+        padding-top: 32px;
+        padding-bottom: 48px;
+    }
+
+    .animal-grid {
+        gap: 18px;
+    }
+
+    .animal-card {
+        padding: 14px;
+    }
+
+    .animal-visual {
+        height: 180px;
+    }
+}
