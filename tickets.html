@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="tickets.css">
+</head>
+<body>
+    <header>
+        <h1>Квитки на події</h1>
+        <p>Забронюйте квитки на концерти, театральні вистави та спортивні заходи.</p>
+        <nav>
+            <ul>
+                <li><a href="#events">Події</a></li>
+                <li><a href="#venues">Квитки</a></li>
+                <li><a href="#contact">Контакти</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="events">
+            <h2>Популярні події</h2>
+            <p>Ось деякі з найближчих подій, на які ви можете придбати квитки:</p>
+            <ul>
+                <li>Концерт гурту "The Rolling Stones" - 15 липня 2024</li>
+                <li>Театральна вистава "Гамлет" - 20 серпня 2024</li>
+                <li>Футбольний матч "Динамо Київ" vs "Шахтар" - 5 вересня 2024</li>
+            </ul>
+        </section>
+        <section id="venues">
+            <h2>Квитки</h2>
+            <p>Виберіть подію та забронюйте квитки онлайн.</p>
+            <!-- Форма для бронювання квитків -->
+             <form action="book_ticket.php" method="post">
+                <label for="event">Виберіть подію:</label>
+                <select id="event" name="event">
+                    <option value="concert">Концерт гурту "The Rolling Stones"</option>
+                    <option value="theater">Театральна вистава "Гамлет"</option>
+                    <option value="football">Футбольний матч "Динамо Київ" vs "Шахтар"</option>
+                </select>
+                <label for="quantity">Кількість квитків:</label>
+                <input type="number" id="quantity" name="quantity" min="1" max="10">
+                <button type="submit">Забронювати</button>
+            </form>
+        </section>
+        <section id="contact">
+            <h2>Контакти</h2>
+            <p>Зв'яжіться з нами для отримання додаткової інформації.</p>
+            <!-- Контактна форма -->
+            <address>
+                <p>Електронна пошта: info@tickets.com</p>
+                <p>Телефон: +380 44 123 45 67</p>
+            </address>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2026 Квитки на події. Всі права захищені.</p>
+    </footer>
+</body>
